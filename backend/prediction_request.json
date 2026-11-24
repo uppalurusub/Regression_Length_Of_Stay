@@ -1,0 +1,98 @@
+
+{
+  "features": {
+    "age": 65,
+    "gender": "Male",
+    "admission_type": "Emergency",
+    "primary_diagnosis": "Pneumonia",
+    "comorbidity_count": 3,
+    "previous_admissions": 2,
+    "insurance_type": "Private",
+    "department": "Pulmonology",
+    "marital_status": "Married",
+    "heart_rate": 98,
+    "blood_pressure": 135,
+    "temperature": 38.2,
+    "oxygen_saturation": 93,
+    "glucose": 145,
+    "creatinine": 1.3,
+    "hemoglobin": 12.5
+  }
+}
+
+
+{
+  "records": [
+   {
+    "age": 65,
+    "gender": "Male",
+    "admission_type": "Emergency",
+    "primary_diagnosis": "Pneumonia",
+    "comorbidity_count": 3,
+    "previous_admissions": 2,
+    "insurance_type": "Private",
+    "department": "Pulmonology",
+    "marital_status": "Married",
+    "heart_rate": 98,
+    "blood_pressure": 135,
+    "temperature": 38.2,
+    "oxygen_saturation": 93,
+    "glucose": 145,
+    "creatinine": 1.3,
+    "hemoglobin": 12.5
+  }
+
+  ]
+}
+
+
+{
+  "records": [
+   {
+    "age": 65,
+    "gender": "Male",
+    "admission_type": "Emergency",
+    "primary_diagnosis": "Pneumonia",
+    "comorbidity_count": 3,
+    "previous_admissions": 2,
+    "insurance_type": "Private",
+    "department": "Pulmonology",
+    "marital_status": "Married",
+    "heart_rate": 98,
+    "blood_pressure": 135,
+    "temperature": 38.2,
+    "oxygen_saturation": 93,
+    "glucose": 145,
+    "creatinine": 1.3,
+    "hemoglobin": 12.5
+  },
+  {
+    "age": 65,
+    "gender": "Female",
+    "admission_type": "Urgent",
+    "primary_diagnosis": "Pneumonia",
+    "comorbidity_count": 3,
+    "previous_admissions": 2,
+    "insurance_type": "Private",
+    "department": "Pulmonology",
+    "marital_status": "Married",
+    "heart_rate": 80,
+    "blood_pressure": 95,
+    "temperature": 37.2,
+    "oxygen_saturation": 85,
+    "glucose": 125,
+    "creatinine": 1.7,
+    "hemoglobin": 13.5
+  }
+  
+
+  ]
+}
+
+{
+  "records": [
+    {
+      "additionalProp1": {}
+    }
+  ]
+}

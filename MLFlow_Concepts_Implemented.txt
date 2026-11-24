@@ -1,0 +1,133 @@
+
+Use Below command to train models, evaludate models, find the best models, register and promote the best model to serve for the predictions
+
+python -m ml.training.train
+
+1. MLflow Tracking
+==================
+Records and tracks ML activities.
+- Parameters
+- Metrics
+- Tags
+- Artifacts
+- Models logged during runs
+
+
+2. Experiments
+==============
+Organize related MLflow runs.
+
+Example:
+- hospital-los-training
+- hospital-los-inference
+- hospital-los-evaluation
+
+
+3. Runs
+=======
+Each execution is recorded as a run.
+
+Example:
+- Linear Regression training run
+- Random Forest training run
+- XGBoost training run
+- Production prediction monitoring run
+
+
+4. Model Registry
+=================
+Manages model versions and their lifecycle.
+- Register model
+- Manage versions
+- Assign aliases such as champion
+- Manage model tags
+- Promote approved model versions
+
+
+5. Evaluations
+==============
+These are performed using train.py, evaluate.py, quality_gate.py
+
+1. Understand the evaluation process
+For your LOS regression model, the evaluation flow is:
+Step 1 — Prepare evaluation data
+
+X_test = patient features
+
+y_test = actual length_of_stay_days
+
+
+Step 2 — Load the trained model
+
+Load the logged model artifact from MLflow.
+
+
+Step 3 — Execute MLflow Evaluation
+
+mlflow.models.evaluate()
+
+
+Step 4 — Calculate metrics
+
+MAE, MSE, RMSE, R², MAPE and other regression metrics.
+
+
+Step 5 — Apply quality gate
+
+Decide whether the candidate model qualifies for registration or promotion.
+
+
+6. Serving or Deploy
+====================
+1. Train and evaluate
+
+Train candidate models and evaluate them using holdout data.
+
+
+2. Register the model
+
+hospital-los-regressor, version 1
+
+
+3. Promote approved version
+
+Assign the champion alias.
+
+
+4. Serve the model
+
+Start an MLflow inference server.
+
+
+5. Consume predictions
+
+FastAPI or another client sends features and receives LOS predictions.
+
+
+Client / Application
+	|
+	V
+los_router.py
+	|
+	V
+
+los_service.py
+	|
+	V
+
+los_implementation.py
+	|
+	V
+
+MLflow Champion Model
+models:/hospital-los-regressor@champion
+	|
+	V
+
+Prediction Monitor + Loguru + MLflow Tracking
+
+
+7. Monitoring
+=============
+Using the prediction_monitor.py and including the final response through services, routers
+
